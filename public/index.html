@@ -14,9 +14,23 @@
     <body ng-controller="QuotesController as ctrl">
         <h1>Motivational Quotes</h1>
 
-        {{2+2}}
+        <form
+            ng-submit="ctrl.submit()"
+            ng-controller="QuotesController as ctrl">
+            <!-- {{ctrl.quotes}} -->
 
-        {{ctrl.quotes}}
+            <ul>
+                <li
+                    ng-click="ctrl.delete(quote._id)"
+                    ng-repeat="quote in ctrl.quotes">
+                    {{quote.name}}
+                </li>
+            </ul>
+
+            <input type="text" ng-model="ctrl.name"/><br>
+            <input type="submit" value="Submit">
+
+        </form>
 
     </body>
 </html>
