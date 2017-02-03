@@ -1,3 +1,13 @@
+body {
+    background-color: #F6D7E0;
+}
+
+h1 {
+    text-align: center;
+    padding: 1em 0 1.5em 0;
+    color: #3A71A8;
+}
+
 #content {
 	background: #f9f9f9;
 	background: -moz-linear-gradient(top,  rgba(248,248,248,1) 0%, rgba(249,249,249,1) 100%);
@@ -13,7 +23,7 @@
 	box-shadow: 0 1px 0 #fff inset;
 	border: 1px solid #c4c6ca;
 	margin: 0 auto;
-	/*padding: 25px 0 0;*/
+    padding: 1em;
 	position: relative;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
@@ -63,4 +73,18 @@
 	transform: rotate(-3deg);
 	top: 0;
 	z-index: -2;
+}
+
+p {
+    padding: 0 0 1em 0;
+}
+
+.input-wrapper {
+    padding: 5em;
+    text-align: center;
+}
+
+input {
+    margin: 1em 0 0 0;
+    width: 20em;
 }

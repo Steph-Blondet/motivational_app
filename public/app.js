@@ -15,7 +15,7 @@ app.controller('QuotesController', ['$http', function($http){
     }).then(
         function(response){
             controller.quotes = response.data;
-            console.log(response.data);
+            // console.log(response.data);
     },
     function(response){
     })
@@ -42,23 +42,22 @@ app.controller('QuotesController', ['$http', function($http){
         );
     }
 
-    this.delete = function(id){
-        console.log('deleting');
-        // console.log(id);
-
-        $http({
-            method: 'DELETE',
-            url: 'http://localhost:3000/quotes/' + id
-        }).then(
-            function(response){
-                console.log(controller);
-                // controller.data.splice(index, 1);
-            },
-            function(response){
-
-            }
-        );
-    }
+    // this.delete = function(id){
+    //     console.log('deleting');
+    //     // console.log(id);
+    //
+    //     $http({
+    //         method: 'DELETE',
+    //         url: 'http://localhost:3000/quotes/' + id
+    //     }).then(
+    //         function(response){
+    //             console.log(controller);
+    //         },
+    //         function(response){
+    //
+    //         }
+    //     );
+    // }
 
 
 
