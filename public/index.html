@@ -14,25 +14,36 @@
     <body ng-controller="QuotesController as ctrl">
         <h1>Motivational Quotes</h1>
 
-        <form
-            ng-submit="ctrl.submit()"
-            ng-controller="QuotesController as ctrl">
 
-            <ul>
-                <li
-                    ng-click="ctrl.delete(quote._id)"
-                    ng-repeat="quote in ctrl.quotes">
-                    <strong>{{quote.quote}}</strong> - <i>by {{quote.author}}.</i> <br>
-                    Posted by: {{quote.name}}
-                </li>
-            </ul>
+            <form
+                ng-submit="ctrl.submit()"
+                ng-controller="QuotesController as ctrl">
 
-            <input type="text" ng-model="ctrl.quote" placeholder="quote"/><br>
-            <input type="text" ng-model="ctrl.author" placeholder="author"/><br>
-            <input type="text" ng-model="ctrl.name" placeholder="name"/><br>
-            <input type="submit" value="Submit">
+                <section id="content">
+                    <ul>
+                        <li
+                            ng-click="ctrl.delete(quote._id)"
+                            ng-repeat="quote in ctrl.quotes">
+                            <p><strong>"{{quote.quote}}"</strong> - <i>by {{quote.author}}.</i> <br>
+                            Posted by: {{quote.name}}</p>
+                        </li>
+                    </ul>
+                </section>
 
-        </form>
+
+                <label>Enter a motivational quote</label><br>
+                <input type="text" ng-model="ctrl.quote" placeholder="quote"/><br>
+
+                <label>Enter the author of that quote</label><br>
+                <input type="text" ng-model="ctrl.author" placeholder="author"/><br>
+
+                <label>Enter your name</label><br>
+                <input type="text" ng-model="ctrl.name" placeholder="name"/><br>
+
+                <input type="submit" value="Submit">
+
+            </form>
+
 
     </body>
 </html>
