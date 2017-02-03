@@ -17,17 +17,19 @@
         <form
             ng-submit="ctrl.submit()"
             ng-controller="QuotesController as ctrl">
-            <!-- {{ctrl.quotes}} -->
 
             <ul>
                 <li
                     ng-click="ctrl.delete(quote._id)"
                     ng-repeat="quote in ctrl.quotes">
-                    {{quote.name}}
+                    <strong>{{quote.quote}}</strong> - <i>by {{quote.author}}.</i> <br>
+                    Posted by: {{quote.name}}
                 </li>
             </ul>
 
-            <input type="text" ng-model="ctrl.name"/><br>
+            <input type="text" ng-model="ctrl.quote" placeholder="quote"/><br>
+            <input type="text" ng-model="ctrl.author" placeholder="author"/><br>
+            <input type="text" ng-model="ctrl.name" placeholder="name"/><br>
             <input type="submit" value="Submit">
 
         </form>

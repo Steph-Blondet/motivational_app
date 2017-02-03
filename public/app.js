@@ -22,7 +22,7 @@ app.controller('QuotesController', ['$http', function($http){
 
     //where we create the quote and get a response back with all the quotes from the collection
     this.submit = function(){
-        console.log('quote: ' + this.name); //to see what we are submittin in the textbox
+        console.log('quote: ' + this.name); //to see what we are submitting in the textbox
         console.log(this);
         $http({
             method: 'POST',
@@ -32,6 +32,8 @@ app.controller('QuotesController', ['$http', function($http){
             function(response){
                 console.log(response);
                 controller.quotes = response.data;
+                controller.quote = "";
+                controller.author = "";
                 controller.name = ""; //this is to clear the input box after after I clicked submit, we can also do empty double quotes
             },
             function(response){
@@ -42,7 +44,7 @@ app.controller('QuotesController', ['$http', function($http){
 
     this.delete = function(id){
         console.log('deleting');
-        console.log(id);
+        // console.log(id);
 
         $http({
             method: 'DELETE',
