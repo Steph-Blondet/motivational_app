@@ -9,7 +9,8 @@ app.use(bodyParser.json());
 
 
 
-
+var quotesController = require('./controllers/quotesController.js')
+app.use('/quotes', quotesController);
 
 
 mongoose.connect('mongodb://localhost:27017/quotes');
