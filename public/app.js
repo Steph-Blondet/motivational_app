@@ -19,6 +19,7 @@ app.controller('QuotesController', ['$http', function($http){
     },
     function(response){
     })
+    
 
     //where we create the quote and get a response back with all the quotes from the collection
     this.submit = function(){
@@ -41,6 +42,8 @@ app.controller('QuotesController', ['$http', function($http){
             }
         );
     }
+
+
 
     // this.delete = function(id){
     //     console.log('deleting');

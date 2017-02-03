@@ -23,7 +23,7 @@ h1 {
 	box-shadow: 0 1px 0 #fff inset;
 	border: 1px solid #c4c6ca;
 	margin: 0 auto;
-    padding: 1em;
+    padding: 1em 0 2.2em 0;
 	position: relative;
 	text-align: center;
 	text-shadow: 0 1px 0 #fff;
@@ -76,7 +76,7 @@ h1 {
 }
 
 p {
-    padding: 0 0 2em 0;
+    padding: 0 0 2.2em 0;
 }
 
 .input-wrapper {
