@@ -27,7 +27,7 @@ app.controller('QuotesController', ['$http', function($http){
         console.log(this);
         $http({
             method: 'POST',
-            url: 'http://localhost:3000/quotes',
+            url: '/quotes',
             data: this
         }).then(
             function(response){
@@ -51,7 +51,7 @@ app.controller('QuotesController', ['$http', function($http){
 
         $http({
             method: 'DELETE',
-            url: 'http://localhost:3000/quotes/' + id
+            url: '/quotes/' + id
         }).then(
             function(response){
                 console.log(controller);
