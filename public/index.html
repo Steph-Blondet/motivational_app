@@ -3,27 +3,25 @@
     <head>
         <meta charset="utf-8">
         <title>Motivational Quotes</title>
-        <!-- BOOTSTRAP CDN -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
         <!-- ANGULAR -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-        <!-- app.js file should go after the Angular script tag -->
-        <script src="/app.js"></script>
+
+        <!-- BOOTSTRAP CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
         <link rel="stylesheet" href="style.css">
     </head>
     <body ng-controller="QuotesController as ctrl">
         <h1>Motivational Quotes</h1>
 
 
-            <form
-                ng-submit="ctrl.submit()"
-                ng-controller="QuotesController as ctrl">
-
+            <div>
                 <div id="content">
                     <ul>
                         <!-- ng-click="ctrl.delete(quote._id)" -->
-                        <li ng-click="ctrl.delete(quote._id)"
-                            ng-repeat="quote in ctrl.quotes">
+                        <li ng-repeat="quote in ctrl.quotes">
                             <p><strong>"{{quote.quote}}"</strong> <br>
                                 <i>by {{quote.author}}.</i>
                                 <br>Posted by: {{quote.name}}
@@ -31,45 +29,51 @@
                         </li>
                     </ul>
 
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add Quote</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Add Quote</button>
 
-
-
-
-
-                </div>
-
-                <div class="input-wrapper">
-                    <input required type="text" ng-model="ctrl.quote" placeholder="Enter a motivational quote"/><br>
-                    <input required type="text" ng-model="ctrl.author" placeholder="Enter the author of that quote"/><br>
-                    <input required type="text" ng-model="ctrl.name" placeholder="Enter your name"/><br>
-                    <input required type="submit" value="Submit">
-                </div>
-
-            </form>
-
-            <!-- MODAL STARTS -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                    <!-- MODAL STARTS -->
+                        <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span>&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
+                        <!-- MODAL ENDS -->
+
+
                 </div>
             </div>
-            <!-- MODAL ENDS -->
 
+
+
+                <form ng-submit="ctrl.submit()">
+                    <div class="input-wrapper">
+                        <input required type="text" ng-model="ctrl.quote" placeholder="Enter a motivational quote"/><br>
+                        <input required type="text" ng-model="ctrl.author" placeholder="Enter the author of that quote"/><br>
+                        <input required type="text" ng-model="ctrl.name" placeholder="Enter your name"/><br>
+                        <input required type="submit" value="Submit">
+                    </div>
+                </form>
+
+            <!-- CDN for JS plugins -->
+            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+            <script src="/app.js"></script>
 
     </body>
 </html>
