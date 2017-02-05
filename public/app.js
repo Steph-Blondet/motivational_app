@@ -11,7 +11,7 @@ app.controller('QuotesController', ['$http', function($http){
     //this will make an ajax call when the page loads
     $http({
         method: 'GET',
-        url: 'http://localhost:3000/quotes'
+        url: '/quotes'
     }).then(
         function(response){
             controller.quotes = response.data;
