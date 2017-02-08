@@ -105,3 +105,11 @@ input {
 .btn {
     background-color: #607671;
 }
+
+.btn:hover {
+    background-color: #262f2d;
+}
+
+.btn a {
+    color: white;
+}
