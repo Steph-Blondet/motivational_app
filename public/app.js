@@ -45,22 +45,22 @@ app.controller('QuotesController', ['$http', function($http){
 
 
 
-    this.delete = function(id){
-        console.log('deleting');
-        // console.log(id);
-
-        $http({
-            method: 'DELETE',
-            url: '/quotes/' + id
-        }).then(
-            function(response){
-                console.log(controller);
-            },
-            function(response){
-
-            }
-        );
-    }
+    // this.delete = function(id){
+    //     console.log('deleting');
+    //     // console.log(id);
+    //
+    //     $http({
+    //         method: 'DELETE',
+    //         url: '/quotes/' + id
+    //     }).then(
+    //         function(response){
+    //             console.log(controller);
+    //         },
+    //         function(response){
+    //
+    //         }
+    //     );
+    // }
 
 
 
