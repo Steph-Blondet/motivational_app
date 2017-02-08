@@ -1,11 +1,22 @@
 body {
-    background-color: #F6D7E0;
+    /*background-color: #F6D7E0;*/
+
+}
+
+.bkg-img {
+    background:
+    linear-gradient(
+      rgba(138, 169, 162, 0.80),
+      rgba(138, 169, 162, 0.80)
+    ),url(img/handwritten-letter.jpg);
 }
 
 h1 {
+    font-family: 'Homemade Apple', cursive;
+    font-size: 3em;
     text-align: center;
     padding: 1em 0 1.5em 0;
-    color: #3A71A8;
+    color: black;
 }
 
 #content {
@@ -16,6 +27,8 @@ h1 {
 	background: -ms-linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
 	background: linear-gradient(top,  rgba(248,248,248,1) 0%,rgba(249,249,249,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f9f9f9',GradientType=0 );
+    font-family: 'Sansita', sans-serif;
+    font-size: 1.3em;
 	-webkit-box-shadow: 0 1px 0 #fff inset;
 	-moz-box-shadow: 0 1px 0 #fff inset;
 	-ms-box-shadow: 0 1px 0 #fff inset;
@@ -87,4 +100,8 @@ p {
 input {
     margin: 1em 0 0 0;
     width: 20em;
+}
+
+.btn {
+    background-color: #607671;
 }
