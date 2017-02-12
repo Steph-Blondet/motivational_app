@@ -17,3 +17,6 @@ The user has to click on the "Add Quote" button to be able to add their quotes t
 
 ## Desktop View
 ![Motivational quotes app view](public/img/motivational-app.png "Motivational quotes app view")
+
+------------------------------------------
+*This full stack web application was the final project of the Full Stack Web Development Immersive Program at General Assembly. *Designed and Developed by Stephanie Blondet, February 2017.
