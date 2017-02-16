@@ -8,6 +8,7 @@ The user has to click on the "Add Quote" button to be able to add their quotes t
 
 ## Technologies Used
 - MVC file structure
+- Angular.js
 - Node.js
 - Express.js
 - MongoDB and Mongoose
